@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kalkulator BMI i kalorii — Mifflin</title>
+<meta name="description" content="Policz BMI i dzienne zapotrzebowanie kaloryczne (Mifflin-St Jeor) z celem: schudnąć, utrzymać, przytyć.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <!-- TODO: link do portfolio, gdy powstanie -->
+  <h1>BMI + kalorie</h1>
+  <p>Gdzie jesteś i ile jeść, żeby dojść do celu?</p>
+  <section class="card">
+    <label>Wzrost (cm) <input id="wz" type="number" min="100" max="250" value="175"></label>
+    <label>Waga (kg) <input id="wg" type="number" min="20" max="400" step="any" value="80"></label>
+    <label>Wiek <input id="wiek" type="number" min="10" max="120" value="35"></label>
+    <label>Płeć <select id="pl"><option value="m">mężczyzna</option><option value="k">kobieta</option></select></label>
+    <label>Aktywność <select id="akt"><option value="1.2">siedząca</option><option value="1.375" selected>lekka</option><option value="1.55">średnia</option><option value="1.725">duża</option></select></label>
+  </section>
+  <section class="card">
+    <h2>Wynik</h2>
+    <div id="out" class="big">—</div>
+    <p id="detail" class="hint"></p>
+  </section>
+  <section class="card">
+    <h2>Jak to działa</h2>
+    <p>BMI to waga podzielona przez wzrost w metrach do kwadratu: poniżej 18,5 to niedowaga, 18,5–24,9 norma, 25–29,9 nadwaga, od 30 otyłość. Zapotrzebowanie liczymy wzorem Mifflina (osobno dla kobiet i mężczyzn) razy współczynnik aktywności — to kalorie na utrzymanie wagi; chcąc chudnąć odejmij ok. 300–500 kcal, ale nie schodź poniżej podstawowej przemiany.</p>
+    <p><strong>Przykład:</strong> mężczyzna 35 lat, 175 cm, 80 kg, lekka aktywność — BMI 26,1 (nadwaga), utrzymanie ok. 2400 kcal, redukcja ok. 1900–2100 kcal. To szacunek, nie diagnoza: przy chorobach skonsultuj dietetyka.</p>
+  </section>
+  <div id="ads-slot" hidden></div>
+  <footer><a href="privacy.html">Prywatność</a> · <a href="kontakt.html">Kontakt</a></footer>
+</main>
+<script src="app.js"></script>
+<script src="ads.js"></script>
+</body>
+</html>
